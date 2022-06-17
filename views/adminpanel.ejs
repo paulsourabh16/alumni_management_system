@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Signup</title>
+</head>
+
+<h1 style="text-align: center; margin-top: 1%; margin-bottom: 2%;">Admin control panel</h1>
+
+
+    <% if(details!=null) { %>
+    <table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Registration No </th>
+        <th>Username</th>
+        <th>Contact No </th>
+        <th>Passout year </th>
+        <th>Address</th>
+        <th>Working in</th>
+        <th>Designation </th>
+        <th>Action</th>
+    </tr>
+    <% details.forEach(function(item){ %>
+    <tr>
+        <td><%= item.name%></td>
+        <td><%= item.regNo %></td>
+        <td><%= item.username%></td>
+        <td><%= item.contactNo %></td>
+        <td><%= item.passoutY%></td>
+        <td><%= item.address%></td>
+        <td><%= item.workingIn%></td>
+        <td><%= item.designation%></td>
+        <td>
+            <a href="/update-user?id=<%= item._id %>" class="btn border-shadow update" data-id= <%= item._id %>>🖊️
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a href="/delete-user?id=<%= item._id %>" class="btn border-shadow delete" data-id= <%= item._id %>>❌
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+       
+    </tr>
+    <% }) %>
+    </table>
+    <% } %>
+
+    <a href="registration">click here for entry registration numbers.</a>
+    <a href="/logout" role="button">Logout</a>
+</body>
+
+</html>

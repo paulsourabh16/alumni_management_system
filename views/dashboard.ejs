@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Your Dashboard</title>
+  </head>
+  
+  <body class="dashbody">
+<div class="green">
+
+      <p class="namea"><%=name%></p>
+      <h2>Registration no: <%=regNo%></h2>
+      <h2>Passout: <%=passoutY%></h2>
+          <h2>Email: <%=username%></h2>
+          <h2>Phone: <%=contactNo%></h2>
+          <h2>Address: <%=Address%></h2>
+        <h2><%=designation%> at <%=currentWorking%><h2>
+<a href="/update-user?id=<%=idd%>" role="button">Update details    </a></b></b><a href="/logout" role="button">Logout</a>
+<p style="visibility: hidden;"><%=idd%></p>
+</div>
+</body>
+</html>

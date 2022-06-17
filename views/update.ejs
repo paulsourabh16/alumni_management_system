@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Signup</title>
+</head>
+<body>
+    <form action="/updat" onsubmit="return verifyPassword()" class="form-signin" method="POST">
+      <div class="signupdiv">
+        <h1 class="top">Update page</h1>
+        <div class="">
+            <div class="input-group mb-sm-2">
+                <input type="hidden" class="form-control" name="id" value="<%= alldata.id%>">
+              </div>
+          <div class="input-group mb-sm-2">
+            <input type="text" class="form-control" name="Name" value="<%= alldata.name%>">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Regno" id="regid" value="<%= alldata.regNo %>">
+          </div>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" name="username" value="<%= alldata.username%>"readonly>
+          </div>
+          <div class="input-group mb-3">
+            <input type="numeric" class="form-control" name="Contact" value="<%= alldata.contactNo %>" maxlength="10">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Passout" value="<%= alldata.passoutY%>">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Address" value="<%= alldata.address%>">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Designation" value="<%= alldata.designation%>">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Working_in" value="<%= alldata.workingIn%>">
+          </div>
+  
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="w-100 btn btn-lg btn-primary buttom_margin" type="submit" method="post">Update</button>
+          </div>
+  
+        </div>
+  
+      </div>
+    </form>
+  
+  
+  </body>
+  
+  </html>
+  

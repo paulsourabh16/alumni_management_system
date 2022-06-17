@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Signup</title>
+</head>
+<body>
+    <form action="/register" onsubmit="return verifyPassword()" class="form-signin" method="POST">
+      <div class="signupdiv">
+        <h1 class="top">Please fill the details</h1>
+        <div class="">
+          <div class="input-group mb-sm-2">
+            <input type="text" class="form-control" name="Name" placeholder="Name" required>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Regno" id="regid" placeholder="Registration no." required>
+          </div>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" name="username" placeholder="Gmail" required>
+          </div>
+          <div class="input-group mb-3">
+            <input type="numeric" class="form-control" name="Contact" placeholder="Contact no." maxlength="10" required>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Passout" placeholder="Passout year" required>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Address" placeholder="Address" required>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" name="password" id="pswd1" placeholder="Password" required>
+            <span id="message" style="color:red"> </span>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" id="pswd2" class="form-control" placeholder="Confirm Password" required>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Designation" placeholder="Designation" required>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Working_in" placeholder="Currently working in" required>
+          </div>
+  
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="w-100 btn btn-lg btn-primary buttom_margin" type="submit" method="post">Register</button>
+          </div>
+  
+        </div>
+  
+      </div>
+    </form>
+  
+  
+  </body>
+  
+  </html>

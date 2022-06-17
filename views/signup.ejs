@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Signup</title>
+</head>
+<script>
+  function verifyPassword() {
+    var pw1 = document.getElementById("pswd1").value;
+    var pw2 = document.getElementById("pswd2").value;
+    var pw3 = document.getElementById("regid").value;
+
+    //minimum password length validation
+    if (pw1.length < 8) {
+      document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+      return false;
+    }
+
+    //maximum length of password validation
+    if (pw1.length > 15) {
+      document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+      return false;
+    }
+    //password confirmer
+    if (pw1.localeCompare(pw2) == 1) {
+      document.getElementById("message").innerHTML = "**Passwords are not same";
+      return false;
+    }
+    switch (pw3) {
+      case "2081907030002":
+        return true;
+        break;
+      case "291406031026":
+        return true;
+        break;
+      case "2081907030013":
+        return true;
+        break;
+      case "2081907030011":
+        return true;
+        break;
+      case "2081907030008":
+        return true;
+        break;
+      case "291606030209":
+        return true;
+        break;
+      case "2081907030014":
+        return true;
+        break;
+      case "2081907030005":
+        return true;
+        break;
+      case "2081907030015":
+        return true;
+        break;
+      case "2081907030020":
+        return true;
+        break;
+      case "2081807030007":
+        return true;
+        break;
+      case "2081907030004":
+        return true;
+        break;
+      case "2081907030019":
+        return true;
+        break;
+      case "2081907030003":
+        return true;
+        break;
+      case "2081907030009":
+        return true;
+        break;
+      case "2081907030007":
+        return true;
+        break;
+      case "2081907030001":
+        return true;
+        break;
+      case "2081907030006":
+        return true;
+        break;
+      case "2081907030017":
+        return true;
+        break;
+      case "2081907030012":
+        return true;
+        break;
+      case "2081907030018":
+        return true;
+        break;
+      case "2081907030016":
+        return true;
+        break;
+      case "2081807030013":
+        return true;
+        break;
+
+      default:
+        alert("Invalid registration number");
+        return false;
+
+    }
+  }
+</script>
+
+<body>
+  <form action="/register" onsubmit="return verifyPassword()" class="form-signin" method="POST">
+    <div class="signupdiv">
+      <h1 class="top">Please fill the details</h1>
+      <div class="">
+        <div class="input-group mb-sm-2">
+          <input type="text" class="form-control" name="Name" placeholder="Name" required>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="Regno" id="regid" placeholder="Registration no." required>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" name="username" placeholder="Gmail" required>
+        </div>
+        <div class="input-group mb-3">
+          <input type="numeric" class="form-control" name="Contact" placeholder="Contact no." maxlength="10" required>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="Passout" placeholder="Passout year" required>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="Address" placeholder="Address" required>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" name="password" id="pswd1" placeholder="Password" required>
+          <span id="message" style="color:red"> </span>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" id="pswd2" class="form-control" placeholder="Confirm Password" required>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="Designation" placeholder="Designation" required>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="Working_in" placeholder="Currently working in" required>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="w-100 btn btn-lg btn-primary buttom_margin" type="submit" method="post">Register</button>
+        </div>
+
+      </div>
+
+    </div>
+  </form>
+
+
+</body>
+
+</html>
